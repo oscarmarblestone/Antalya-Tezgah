@@ -51,7 +51,7 @@ const products = [
   { name: "Turuncu Mont", image: "resim8.jpg" },
   { name: "Gri Pantolon", image: "resim9.jpg" },
   { name: "Sarı Saat", image: "resim10.jpg" },
-  { name: "Pembe Bluz", image: "resim11.jpg" },
+  { name: ".....", image: "resim11.jpg" },
   { name: "Lacivert Takım", image: "resim12.jpg" },
   { name: "Krem Ayakkabı", image: "resim13.jpg" },
   { name: "Desenli Etek", image: "resim14.jpg" },
@@ -108,3 +108,4 @@ document.addEventListener("keydown", (event) => {
     closeModal();
   }
 });
+
