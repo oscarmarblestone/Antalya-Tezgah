@@ -1,0 +1,344 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root{
+  --bg:#ffffff;
+  --muted:#666;
+  --accent:#333;
+  --header-bg:linear-gradient(90deg,#222,#444);
+  --max-width:1100px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem;
+  background:var(--header-bg);
+  color:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,0.12);
+  position:relative;
+}
+
+header .logo {
+  font-size:1.25rem;
+  font-weight:700;
+  letter-spacing:0.4px
+}
+
+header nav ul { 
+  display: flex; 
+  list-style: none; 
+}
+
+header nav ul li { 
+  margin: 0 1rem; 
+}
+
+header nav ul li a { 
+  color: #fff; 
+  text-decoration: none; 
+  display: inline-block; 
+  padding: 0.4rem 0.6rem; 
+  font-size: 1rem; 
+  font-weight: 600; 
+  letter-spacing: 0.2px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover { 
+  color: #ffd700; 
+}
+
+#menu-toggle { 
+  display: none; 
+  background: none; 
+  border: none; 
+  color: #fff; 
+  font-size: 1.6rem; 
+  padding: 0.25rem 0.6rem; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  position:relative; 
+  z-index:9999; 
+}
+
+#menu { 
+  position: relative; 
+}
+
+#menu ul { 
+  margin: 0; 
+}
+
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section h1 {
+  color: #333333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+section h2 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-hero {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.page-hero h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  color: #666;
+}
+
+.content-box {
+  max-width: 900px;
+  background: #fff;
+  margin: 1rem auto;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.content-box h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-section {
+  max-width: 600px; 
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.contact-box {
+  background: #f9f9f9;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.contact-box h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link i {
+  font-size: 3.5rem;
+  transition: transform 0.3s ease;
+}
+
+.icon-link span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.whatsapp-icon {
+  color: #25D366;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon:hover i {
+  transform: scale(1.15);
+}
+
+.instagram-icon {
+  color: #E1306C;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.1);
+}
+
+.instagram-icon:hover i {
+  transform: scale(1.15);
+}
+
+.contact-info {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.contact-info p {
+  color: #666;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .social-icons {
+    gap: 2rem;
+  }
+
+  .icon-link i {
+    font-size: 2.5rem;
+  }
+
+  .icon-link span {
+    font-size: 1rem;
+  }
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  #menu-toggle { 
+    display: block; 
+  }
+
+  header nav ul { 
+    flex-direction: column; 
+    display: none; 
+  }
+
+  #menu.active ul { 
+    display: flex; 
+  }
+
+  #menu.active {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    background: rgba(34,34,34,0.99);
+    z-index: 150;
+    width: auto;
+    min-width: 220px;
+    max-width: 280px;
+    animation: slideDown 0.4s ease-out;
+    margin: 0;
+    border-radius: 0 0 0 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  nav#menu.active ul {
+    display: flex !important;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+
+  #menu.active ul li { 
+    margin: 0; 
+    list-style: none;
+  }
+
+  #menu.active ul li a {
+    padding: 0.85rem 1.25rem; 
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+
+  #menu.active ul li a:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  section {
+    max-width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  section h1 {
+    font-size: 1.5rem;
+  }
+
+  .content-box {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.5rem;
+  }
+}
